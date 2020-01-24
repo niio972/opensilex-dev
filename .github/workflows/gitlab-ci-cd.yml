@@ -16,6 +16,6 @@ jobs:
         git clone https://oauth2:${{ secrets.FORGEMIA_PAT }}@forgemia.inra.fr/arnaud.charleroy/opensilex-dev.git
         git remote add upstream https://github.com/OpenSILEX/opensilex-dev.git
         git fetch origin
-        git checkout upstream
-        git pull master upstream
+        git checkout -b upstream
+        git pull upstream/master upstream
         git push origin upstream
