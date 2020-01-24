@@ -13,9 +13,9 @@ jobs:
     - uses: actions/checkout@master
     - name:  curl
       run: |
-        git clone https://oauth2:${{ secrets.FORGEMIA_PAT }}@forgemia.inra.fr/OpenSILEX/opensilex-dev.git
+        git clone https://oauth2:${{ secrets.FORGEMIA_PAT }}@forgemia.inra.fr/arnaud.charleroy/opensilex-dev.git
         git remote add upstream https://github.com/OpenSILEX/opensilex-dev.git
         git fetch origin
         git checkout upstream
-        git merge pull upstream upstream
+        git pull master upstream
         git push origin upstream
